@@ -34,6 +34,7 @@ const unknownEndpoint = (request, response) => {
   response.status(404).json({ error: "Endpoint Doesn't Exist" });
 }
 
+app.use(express.static('dist'))
 app.use(cors())
 app.use(express.json())
 app.use(morgan('Server running on port 3001'))
